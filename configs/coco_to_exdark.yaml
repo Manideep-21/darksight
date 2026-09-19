@@ -1,0 +1,13 @@
+# Ultralytics COCO-80 class index -> ExDark YOLO id (source of truth: darksight/constants.py)
+0: 10   # person       -> People
+1: 0    # bicycle      -> Bicycle
+2: 4    # car          -> Car
+3: 9    # motorcycle   -> Motorbike
+5: 3    # bus          -> Bus
+8: 1    # boat         -> Boat
+15: 5   # cat          -> Cat
+16: 8   # dog          -> Dog
+39: 2   # bottle       -> Bottle
+41: 7   # cup          -> Cup
+56: 6   # chair        -> Chair
+60: 11  # dining table -> Table

@@ -1,0 +1,25 @@
+# data & large artefacts (live on Google Drive)
+data/
+runs/
+results/E*/predictions_*.jsonl
+results/E*/val_*/
+reports/label_check*/
+weights/*.pt
+!weights/.gitkeep
+# zerodce_epoch99.pth (320 KB) IS committed on purpose
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.gradio/
+*.egg-info/
+
+# os / editors
+.DS_Store
+.vscode/
+.idea/
+results/E*/detections_*/
+results/E*_vs_E*_*/

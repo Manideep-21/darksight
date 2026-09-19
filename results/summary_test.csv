@@ -1,0 +1,3 @@
+experiment,description,map50,precision,recall,ultra_map50,ultra_map50_95,ultra_precision,ultra_recall
+E0,COCO YOLOv8s zero-shot on raw images,0.6092212149390824,0.7096772278598094,0.5721495971132088,,,,
+E1,COCO YOLOv8s zero-shot on Zero-DCE enhanced images,0.566553734424441,0.7092751125834383,0.5286256962407567,,,,

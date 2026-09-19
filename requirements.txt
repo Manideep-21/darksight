@@ -1,0 +1,15 @@
+# DarkSight — Python 3.11. Exact versions pinned in requirements-lock.txt after Week 1 install.
+torch>=2.2
+torchvision>=0.17
+ultralytics>=8.3,<9
+opencv-python-headless>=4.9
+pillow>=10.0
+numpy>=1.26,<3
+pandas>=2.1
+matplotlib>=3.8
+scikit-image>=0.22
+pyyaml>=6.0
+tqdm>=4.66
+gradio>=4.44
+gdown>=5.1
+pytest>=8.0

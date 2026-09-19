@@ -1,0 +1,19 @@
+# Shared YOLOv8 fine-tuning settings. BOTH detectors (det_raw, det_enh) must use this file
+# unchanged — the only allowed difference between them is the dataset they are trained on.
+model: yolov8s.pt          # COCO-pretrained; use yolov8n.pt only for smoke tests
+imgsz: 640
+epochs: 60
+patience: 15
+batch: 16                  # T4 16GB; drop to 8 if CUDA OOM (and then use 8 for both)
+optimizer: auto
+lr0: 0.01
+cos_lr: false
+close_mosaic: 10
+seed: 0
+deterministic: true
+pretrained: true
+amp: true
+workers: 2                 # Colab has 2 vCPUs
+cache: false               # 'disk' speeds up epochs if /content has ~10GB free
+save_period: 5             # checkpoint every 5 epochs (Colab disconnects)
+plots: true

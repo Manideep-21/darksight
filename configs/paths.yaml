@@ -1,0 +1,5 @@
+# Dataset roots used by run_experiment.py. Relative paths are resolved from the project root.
+# On Colab, set DARKSIGHT_DATA=/content/data (fast local disk) or a Drive path instead.
+data_root: data/exdark_yolo
+weights_root: weights
+results_root: results

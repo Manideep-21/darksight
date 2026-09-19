@@ -1,0 +1,33 @@
+# Experiment matrix (plan §4). All run on the SAME official ExDark test images.
+# dataset: sub-folder of data_root containing images/ and labels/
+# weights: file in weights_root, or an Ultralytics model name (auto-download)
+E0:
+  description: COCO YOLOv8s zero-shot on raw images
+  weights: yolov8s.pt
+  coco_remap: true
+  dataset: raw
+E1:
+  description: COCO YOLOv8s zero-shot on Zero-DCE enhanced images
+  weights: yolov8s.pt
+  coco_remap: true
+  dataset: enhanced
+E2:
+  description: "Baseline: detector fine-tuned on raw, tested on raw"
+  weights: det_raw.pt
+  dataset: raw
+E3:
+  description: Detector fine-tuned on raw, tested on enhanced (no retraining)
+  weights: det_raw.pt
+  dataset: enhanced
+E4:
+  description: "Proposed: detector fine-tuned on enhanced, tested on enhanced"
+  weights: det_enh.pt
+  dataset: enhanced
+E5:
+  description: Detector fine-tuned on enhanced, tested on luminance-gated enhancement
+  weights: det_enh.pt
+  dataset: enhanced_gated
+E6:
+  description: "(stretch) Detector fine-tuned on raw, tested on CLAHE images"
+  weights: det_raw.pt
+  dataset: clahe
