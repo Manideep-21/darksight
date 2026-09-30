@@ -16,8 +16,8 @@ Tick items in PRs. ✅ = already done in the initial scaffold.
 - [ ] **All** — 30-min metrics walkthrough session
 
 ## Week 2 — Individual models
-- [ ] **B** — Kaggle: attach ExDark, run `04_kaggle_full_pipeline` cells 1–4 → smoke train, then `det_raw` (`--device 0,1 --batch 32`)
-- [ ] **B** — download `det_raw.pt` from the Kaggle output; run `run_experiment.py --exp E2`
+- [ ] **B** — Kaggle: Run All on `05_kaggle_E2_E3.ipynb` → `det_raw` + **E2 + E3**
+- [ ] **B** — download `det_raw.pt` + `darksight_E2_E3.zip` from the Kaggle Output panel; commit metrics
 - [x] ✅ **C** — evaluator, experiment runner, results table, latency benchmark, Gradio app shell
 - [x] ✅ **C** — E0/E1 run locally (0.609 → 0.567 mAP@0.5, CI excludes 0); re-run on Colab to confirm
 - [x] ✅ Smoke training (yolov8n, 1 epoch) + `model.val()` wrapper verified on MPS

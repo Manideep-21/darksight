@@ -2,14 +2,20 @@
 
 Kaggle is the recommended place to train: 2× T4 (32 GB total), 12-hour sessions, ~30 GPU-hours/week,
 and `/kaggle/working` survives a session restart. Everything is driven by
-`notebooks/04_kaggle_full_pipeline.ipynb` — this page is the checklist around it.
+two notebooks — this page is the checklist around them.
+
+| Notebook | What it does | Time |
+|---|---|---|
+| `notebooks/05_kaggle_E2_E3.ipynb` | trains `det_raw`, then runs **E2** (raw) and **E3** (enhanced at test time) | ~1.5–2 h |
+| `notebooks/04_kaggle_full_pipeline.ipynb` | everything: both detectors, E0–E5, all figures | ~3–4 h |
+
+Both clone https://github.com/Manideep-21/darksight.git, so no editing is needed.
 
 ## One-time setup
 1. Kaggle account → **Settings → Phone verification** (required to enable Internet in notebooks).
-2. Push this repo to GitHub and put its URL into the notebook's clone cell (replace `<your-team>`).
-   Private repo? Use a Kaggle Secret with a PAT, or upload the repo as a Kaggle Dataset instead.
-3. Create a notebook → **File → Import Notebook** → upload `notebooks/04_kaggle_full_pipeline.ipynb`.
-4. Right-hand panel: **Accelerator = GPU T4 x2**, **Internet = On**, **Persistence = Variables and Files**.
+2. Create a notebook → **File → Import Notebook** → upload the `.ipynb` you want.
+3. Right-hand panel: **Accelerator = GPU T4 x2**, **Internet = On**, **Persistence = Variables and Files**.
+4. Press **Run All**. Notebook 05 needs no attached dataset — it downloads ExDark itself if none is attached.
 
 ## Attaching ExDark
 **Add Input → Datasets → search "ExDark"**. Public mirrors exist, e.g.

@@ -25,8 +25,9 @@ pytest -q                            # 28 tests, ~10 s
 Apple Silicon uses `mps` automatically (`darksight/device.py` picks cuda → mps → cpu).
 
 ### Kaggle — training (recommended: 2× T4)
-Import `notebooks/04_kaggle_full_pipeline.ipynb`, set Accelerator = **GPU T4 x2**, Internet = On, attach a public
-ExDark dataset, run top to bottom: prepare → enhance → train both detectors → all experiments → results zip.
+Import a notebook, set Accelerator = **GPU T4 x2**, Internet = On, press Run All (no dataset to attach, no cell to edit):
+- `notebooks/05_kaggle_E2_E3.ipynb` — trains `det_raw`, produces **E2 + E3** (~1.5–2 h)
+- `notebooks/04_kaggle_full_pipeline.ipynb` — both detectors and **E0–E5** end to end (~3–4 h)
 Full checklist in [`docs/kaggle.md`](docs/kaggle.md).
 
 ### Colab — alternative (single T4)
