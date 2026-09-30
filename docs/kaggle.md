@@ -6,10 +6,12 @@ two notebooks — this page is the checklist around them.
 
 | Notebook | What it does | Time |
 |---|---|---|
-| `notebooks/05_kaggle_E2_E3.ipynb` | trains `det_raw`, then runs **E2** (raw) and **E3** (enhanced at test time) | ~1.5–2 h |
+| `notebooks/05_kaggle_E2_E3.ipynb` | **self-contained walkthrough** — plain Python in every cell, no repo scripts: convert data → Zero-DCE → train `det_raw` → **E2** vs **E3** → per-class and per-lighting tables → example pictures | ~1.5–2 h |
 | `notebooks/04_kaggle_full_pipeline.ipynb` | everything: both detectors, E0–E5, all figures | ~3–4 h |
 
-Both clone https://github.com/Manideep-21/darksight.git, so no editing is needed.
+Notebook 04 clones https://github.com/Manideep-21/darksight.git and calls the repo scripts.
+Notebook 05 only borrows two small files from the repo (the official split list and the Zero-DCE weights);
+all of its logic is written out in the notebook itself, which makes it the one to walk a reader through.
 
 ## One-time setup
 1. Kaggle account → **Settings → Phone verification** (required to enable Internet in notebooks).
