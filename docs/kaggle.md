@@ -4,14 +4,18 @@ Kaggle is the recommended place to train: 2× T4 (32 GB total), 12-hour sessions
 and `/kaggle/working` survives a session restart. Everything is driven by
 two notebooks — this page is the checklist around them.
 
-| Notebook | What it does | Time |
-|---|---|---|
-| `notebooks/05_kaggle_E2_E3.ipynb` | **self-contained walkthrough** — plain Python in every cell, no repo scripts: convert data → Zero-DCE → train `det_raw` → **E2** vs **E3** → per-class and per-lighting tables → example pictures | ~1.5–2 h |
-| `notebooks/04_kaggle_full_pipeline.ipynb` | everything: both detectors, E0–E5, all figures | ~3–4 h |
+| Notebook | What it does | Needs | Time |
+|---|---|---|---|
+| `05_kaggle_E2_E3.ipynb` | trains `det_raw`; **E2** (raw) vs **E3** (brightened at test time) | nothing | ~1.5–2 h |
+| `06_kaggle_E4.ipynb` | trains `det_enh` on brightened photos; **E4** — the main result | 05's output (optional) | ~2–2.5 h |
+| `07_kaggle_E5_E6.ipynb` | **E5** brighten only dark photos (τ tuned on val) · **E6** CLAHE instead of Zero-DCE | 06's output | ~40 min |
+| `08_kaggle_final_results.ipynb` | final table, bootstrap significance test, report figures, speed, live demo link | 05 + 06 outputs | ~20 min |
+| `04_kaggle_full_pipeline.ipynb` | the same work in one go, using the repo scripts instead of inline code | nothing | ~3–4 h |
 
-Notebook 04 clones https://github.com/Manideep-21/darksight.git and calls the repo scripts.
-Notebook 05 only borrows two small files from the repo (the official split list and the Zero-DCE weights);
-all of its logic is written out in the notebook itself, which makes it the one to walk a reader through.
+Notebooks 05–08 are **self-contained**: every step is plain Python in the cells, so you can explain them
+line by line. They only borrow two small files from the repo (the official split list and the Zero-DCE
+weights). Run them in order and attach the previous notebook's output when the table says so
+(**Add Input → Your Work → Notebook Output**).
 
 ## One-time setup
 1. Kaggle account → **Settings → Phone verification** (required to enable Internet in notebooks).

@@ -26,9 +26,9 @@ Tick items in PRs. ✅ = already done in the initial scaffold.
 
 ## Week 3 — Integration
 - [ ] **A** — `enhance_dataset.py` on all splits (Kaggle, `--half`) + `verify_dataset.py` (notebook cell 3)
-- [ ] **B** — train `det_enh` with the unchanged `configs/train.yaml`
-- [ ] **A** — tune τ on val (E5 variant), then build `enhanced_gated` for test
-- [ ] **C** — `run_experiment.py --exp E3 E4 E5`, `compare_experiments.py --a E2 --b E4`, `eval_by_condition.py`
+- [ ] **B** — Kaggle: Run All on `06_kaggle_E4.ipynb` (attach 05's output) → `det_enh` + **E4**
+- [ ] **A** — Kaggle: Run All on `07_kaggle_E5_E6.ipynb` (attach 06's output) → **E5** (τ from val) + **E6** CLAHE
+- [ ] **C** — Kaggle: Run All on `08_kaggle_final_results.ipynb` (attach 05 + 06 outputs) → final table, bootstrap CI, report figures, demo link
 - [ ] **B** (if GPU time) — second seed for det_raw/det_enh (`--seed 1 --name det_raw_s1`)
 - [ ] **A** (stretch) — E6 CLAHE dataset
 

@@ -26,10 +26,15 @@ Apple Silicon uses `mps` automatically (`darksight/device.py` picks cuda → mps
 
 ### Kaggle — training (recommended: 2× T4)
 Import a notebook, set Accelerator = **GPU T4 x2**, Internet = On, press Run All (no dataset to attach, no cell to edit):
-- `notebooks/05_kaggle_E2_E3.ipynb` — **self-contained and beginner-readable**: every step written out in plain
-  Python (no imports from `darksight/`), trains `det_raw` and produces **E2 + E3** (~1.5–2 h). Use this one to
-  explain the project.
-- `notebooks/04_kaggle_full_pipeline.ipynb` — both detectors and **E0–E5** end to end (~3–4 h)
+**Self-contained notebooks** (plain Python in every cell, nothing imported from `darksight/` — use these to
+explain the project). Run in order, attaching the previous notebook's output where noted:
+- `05_kaggle_E2_E3.ipynb` — trains `det_raw` → **E2 vs E3** (~1.5–2 h)
+- `06_kaggle_E4.ipynb` — trains `det_enh` → **E4**, the main result (~2–2.5 h)
+- `07_kaggle_E5_E6.ipynb` — **E5** luminance gate + **E6** CLAHE baseline (~40 min)
+- `08_kaggle_final_results.ipynb` — final table, bootstrap significance test, report figures, speed, demo (~20 min)
+
+`04_kaggle_full_pipeline.ipynb` does all of it in one run using the repo scripts instead (~3–4 h).
+Details: [`docs/kaggle.md`](docs/kaggle.md).
 Full checklist in [`docs/kaggle.md`](docs/kaggle.md).
 
 ### Colab — alternative (single T4)
